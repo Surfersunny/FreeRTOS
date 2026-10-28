@@ -10,11 +10,12 @@
 　　需要修改的地方主要在于**TICK_RATE_HZ**  **Memory management settings（定义栈大小）**  **Hook function related definitions（异常检测钩子函数）**  **Run time and tasks stat gathering**  **Software Timers**
 
 　　CubeMX 生成代码后，即可尝试简单任务代码：两 LED 交替闪烁 + 串口 学习如下五个 API 函数:
-    - **xTaskCreate**
-    - **xTaskGetTickCount**
-    - **vTaskDelay**
-    - **vTaskDelayUntil**
-    - **vTaskDelete**
+  
+- **xTaskCreate**
+- **xTaskGetTickCount**
+- **vTaskDelay**
+- **vTaskDelayUntil**
+- **vTaskDelete**
 
 　　其中 x 前缀意味着有返回值，v 代表没有（即 void）。
 
