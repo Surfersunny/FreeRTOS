@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to OpenOCD", // 调试配置文件名
+            "type": "cortex-debug", // 调用 cortex-debug 插件
+            "request": "attach",
+            "servertype": "external", // 此处 external 表示使用外部调试服务器 即需要先运行 tasks.json 中的 debug 任务
+            "gdbTarget": "localhost:3333",
+            // 注意根据你的工程项目名修改下方路径并取消注释
+            "executable": "./build/Debug/Demo.elf",
+            // 可选： "svdFile": "./目标芯片.svd" 可观察寄存器值
+            "cwd": "."
+        }
+    ]
+}

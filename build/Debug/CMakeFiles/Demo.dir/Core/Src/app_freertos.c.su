@@ -1,0 +1,4 @@
+C:/Users/DELL/Desktop/Demo/Core/Src/app_freertos.c:72:6:vApplicationStackOverflowHook	16	static
+C:/Users/DELL/Desktop/Demo/Core/Src/app_freertos.c:84:6:vApplicationMallocFailedHook	4	static
+C:/Users/DELL/Desktop/Demo/Core/Src/app_freertos.c:105:6:MX_FREERTOS_Init	8	static
+C:/Users/DELL/Desktop/Demo/Core/Src/app_freertos.c:147:6:StartDefaultTask	16	static

@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0", // VSCode任务配置文件规范版本号 勿删勿改
+    "tasks": [
+        // 调试模式
+        {
+            "label": "debug", // 任务名标签
+            "type": "shell", // 类型 shell 表示在终端中执行命令
+            "command": "openocd", // 执行命令 调用 OpenOCD 工具
+            "args": [
+                "-f",
+                "./openocd.cfg"
+            ],
+            "problemMatcher": []
+        },
+
+        // 直烧模式
+        // 注意根据你的工程项目名修改下方 program 后的路径并取消注释
+        {
+            "label": "download",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f",
+                "./openocd.cfg",
+                "-c",
+                "program \"./build/Debug/Demo.elf\" verify reset exit"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
