@@ -9,15 +9,16 @@
 
 　　需要修改的地方主要在于**TICK_RATE_HZ**  **Memory management settings（定义栈大小）**  **Hook function related definitions（异常检测钩子函数）**  **Run time and tasks stat gathering**  **Software Timers**
 
-　　CubeMX 生成代码后，即可尝试简单任务代码：两 LED 交替闪烁 + 串口 学习如下五个 API 函数:
+　　CubeMX 生成代码后，即可尝试简单任务代码：两 LED 交替闪烁 + 串口 共学习如下六个 API 函数:
   
 - **xTaskCreate** 创建任务
 - **xTaskGetTickCount** 获取时刻（基于SysTick）
 - **vTaskDelay** 相对延时
 - **vTaskDelayUntil** 绝对延时
 - **vTaskDelete** 删除任务
+- **vTaskList** 列出任务
 
-　　其中 x 前缀意味着有返回值，v 意味着没有（即 void）。
+　　其中 x 前缀意味着有返回值，v 意味着没有（即 void）。注意！！！**函数不都是可以直接用的，若出现报错需要在*FreeRTOSConfig.h*中及时查看对应函数宏定义是否为1**
 
     
 
