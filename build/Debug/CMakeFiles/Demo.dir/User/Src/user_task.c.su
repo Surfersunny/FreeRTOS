@@ -1,4 +1,4 @@
-C:/Users/DELL/Desktop/Demo/User/Src/user_task.c:12:6:Init	16	static
-C:/Users/DELL/Desktop/Demo/User/Src/user_task.c:19:13:Task_LED1	16	static
-C:/Users/DELL/Desktop/Demo/User/Src/user_task.c:31:13:Task_LED2	16	static
-C:/Users/DELL/Desktop/Demo/User/Src/user_task.c:43:13:Task_UART	56	static
+C:/Users/DELL/Desktop/Demo/User/Src/user_task.c:16:6:Init	16	static
+C:/Users/DELL/Desktop/Demo/User/Src/user_task.c:27:13:Task_LED1	16	static
+C:/Users/DELL/Desktop/Demo/User/Src/user_task.c:45:13:Task_LED2	16	static
+C:/Users/DELL/Desktop/Demo/User/Src/user_task.c:57:13:Task_UART	56	static
