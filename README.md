@@ -1,6 +1,6 @@
 # FreeRTOS
 
-## 第一节：初识FreeRTOS——基本配置 API函数 任务创建与运行
+## 第一节：初识FreeRTOS——CubeMX配置 API函数 任务创建与运行
 　　在了解基本的嵌入式外设后，学习FreeRTOS可以说是水到渠成的事情，其本质上就是将 GPIO， ADC，定时器，有线通信等均视为**任务**，并提供统一的函数接口及调度管理方式。
 
 　　CubeMX 配置中，最上面四个是最为常用的外设部分，其对应的基本开发想必已经信手拈来了。FreeRTOS 的配置位于**Middleware and Software Packs**，如下图。
@@ -11,13 +11,13 @@
 
 　　CubeMX 生成代码后，即可尝试简单任务代码：两 LED 交替闪烁 + 串口 学习如下五个 API 函数:
   
-- **xTaskCreate**
-- **xTaskGetTickCount**
-- **vTaskDelay**
-- **vTaskDelayUntil**
-- **vTaskDelete**
+- **xTaskCreate** 创建任务
+- **xTaskGetTickCount** 获取时刻（基于SysTick）
+- **vTaskDelay** 相对延时
+- **vTaskDelayUntil** 绝对延时
+- **vTaskDelete** 删除任务
 
-　　其中 x 前缀意味着有返回值，v 代表没有（即 void）。
+　　其中 x 前缀意味着有返回值，v 意味着没有（即 void）。
 
     
 
