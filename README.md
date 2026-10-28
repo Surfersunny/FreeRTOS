@@ -24,15 +24,15 @@
 
 　　创建任务示例
 　　
-  xTaskCreate(Task_LED1, "LED1", 128, NULL, 2, &hTaskLED1)
+    xTaskCreate(Task_LED1, "LED1", 128, NULL, 2, &hTaskLED1)
 
 　　**必备函数**！Task_LED1即为任务函数，“LED1”为名称（TaskList显示的即为此名称），128为分配内存空间，“2”为优先级（数字越大优先级越高），hTaskLED1为实际句柄TaskHandle_t（类比对象是类的实例，可以认为是任务函数的实例化）
 
-  vTaskDelay(pdMS_TO_TICKS(300)) vTaskDelayUntil(&now, pdMS_TO_TICKS(1000))
+    vTaskDelay(pdMS_TO_TICKS(300)) vTaskDelayUntil(&now, pdMS_TO_TICKS(1000))
 
 　　从函数签名即可看出相对和绝对延时的区别：相对是从任务完成后才开始计时，必然会受到任务执行耗时的影响，不可用于精确定时，绝对延时记录结束时刻规划下一次执行的精确时间戳。同时注意两个函数都只控制任务在**阻塞&就绪**状态间切换，对于函数**运行**不加以任何干涉！！！
   
-  vApplicationMallocFailedHook(void) vApplicationStackOverflowHook(void)
+    vApplicationMallocFailedHook(void) vApplicationStackOverflowHook(void)
 
 　　两个钩子函数用于异常防范：区别在于Malloc更大（针对整个堆大小而言，heap是cubemx中配置的总空间！FreeRTOS所有任务+变量均消耗此空间，相当于总池子不够） StackOverflow较小（针对某一任务的小池子，相当于分配的小池子不够该任务所需空间，如分配任务共128B然而任务内定义了256B大小的数组）
 
