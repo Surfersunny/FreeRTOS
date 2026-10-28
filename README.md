@@ -26,7 +26,7 @@
 　　
     xTaskCreate(Task_LED1, "LED1", 128, NULL, 2, &hTaskLED1)
 
-　　**必备函数**！Task_LED1即为任务函数，“LED1”为名称（TaskList显示的即为此名称），128为分配内存空间，“2”为优先级（数字越大优先级越高），hTaskLED1为实际句柄TaskHandle_t（类比对象是类的实例，可以认为是任务函数的实例化）
+　　基本**必备函数**！Task_LED1即为任务函数，“LED1”为名称（TaskList显示的即为此名称），128为分配内存空间，“2”为优先级（数字越大优先级越高），hTaskLED1为实际句柄TaskHandle_t（类比对象是类的实例，可以认为是任务函数的实例化）
 
     vTaskDelay(pdMS_TO_TICKS(300)) vTaskDelayUntil(&now, pdMS_TO_TICKS(1000))
 
