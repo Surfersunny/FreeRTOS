@@ -3,9 +3,11 @@
 
 #include "FreeRTOS.h"
 #include "task.h"
-#include "cmsis_os.h"
+#include "queue.h"
+
 #include "gpio.h"
 #include "usart.h"
+
 #include "stdio.h"
 #include "string.h"
 
